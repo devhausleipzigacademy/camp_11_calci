@@ -40,7 +40,6 @@ function initEmployees() {
 employeeForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = Object.fromEntries(new FormData(employeeForm));
-
   /*@Todo Clever Validation */
   if (formData.name === "" || formData.team === "" || formData.salary === "") {
     alert("Please fill all the fields");
@@ -53,7 +52,6 @@ employeeForm.addEventListener("submit", (e) => {
     "employees",
     JSON.stringify([...existingEmployees, formData])
   );
-
   const employeeItem = document.createElement("li");
   employeeItem.classList.add(
     "bg-purple-500",
