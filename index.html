@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,65 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header></header>
+    <main class="h-screen flex justify-center items-center">
+      <div class="w-[75%]">
+        <div class="flex justify-between">
+          <h1 class="text-3xl font-bold">Employees List</h1>
+          <button
+            id="add-employee"
+            class="bg-purple-500 text-white py-2 px-4 rounded-md"
+          >
+            Add Employee
+          </button>
+        </div>
+        <div class="mt-8">
+          <ul id="employee-list" class="flex flex-col gap-2"></ul>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <div
+      id="employee-modal"
+      class="absolute z-10 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[350px] bg-white hidden py-6 px-4 border border-neutral-500 shadow-md rounded-md"
+    >
+      <h3 class="text-3xl font-bold">Employee Form</h3>
+      <form class="mt-4 flex gap-2 flex-col">
+        <div class="flex gap-2">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="border border-neutral-500 rounded-sm"
+          />
+        </div>
+        <div class="flex gap-2">
+          <label for="team">Team:</label>
+          <input
+            type="text"
+            id="team"
+            name="team"
+            class="border border-neutral-500 rounded-sm"
+          />
+        </div>
+        <div class="flex gap-2">
+          <label for="salary">Salary:</label>
+          <input
+            type="number"
+            id="salary"
+            name="salary"
+            class="border border-neutral-500 rounded-sm"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-purple-500 text-white py-2 px-4 rounded-md"
+        >
+          Create Employee
+        </button>
+      </form>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
